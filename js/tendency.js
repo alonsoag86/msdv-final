@@ -1,4 +1,4 @@
-d3.csv('./data/final_all_news_16.csv')
+d3.csv('../data/final_all_news_16.csv')
   .then(function(data) {
     // 1) read csv file
     // 2) make sure there are no errors
