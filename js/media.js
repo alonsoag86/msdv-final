@@ -1,4 +1,4 @@
-d3.csv('../data/media_tendency.csv')
+d3.csv('./data/media_tendency.csv')
   .then(function(data) {
     data.forEach(function(d) {
       d.positive = +d.positive;
