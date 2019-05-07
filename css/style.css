@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+@font-face {
+  font-family: Open Sans;
+  src: url('../assets/fonts/ObjectSans-Regular.otf') format('opentype');
+}
+
+body {
+  color: #02111b;
+  font-family: Open Sans, Helvetica, sans-serif;
+  background-color: #fcfcfc;
+  font-size: 18px;
+}
+
+#title {
+  height: 600px;
+}
+
+.subt {
+  margin-top: 60px;
+  font-size: 22px;
+}
+
+.anchor {
+  background-color: #bfc0c1;
+  padding: 3px;
+  color: #02111b;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #02111b;
+}
+
+#data-intro {
+  margin-bottom: 150px;
+}
+
+#example-title {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-bottom: 50px;
+}
+
+.positive {
+  background-color: #5cdacc;
+  padding: 3px;
+}
+
+.negative {
+  background-color: #ff1d34;
+  padding: 3px;
+}
+
+.balanced {
+  background-color: #ffc750;
+  padding: 3px;
+}
+
+.informational {
+  background-color: #ff8c50;
+  padding: 3px;
+}
+
+.btn {
+  background-color: #bfc0c1;
+  color: #02111b;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.btn-primary:hover {
+  background-color: #02111b;
+  color: #fcfcfc;
+}
+
+.modal-body {
+  font-size: 14px;
+  text-align: left;
+}
+
+.tendency-bar {
+  margin-top: 70px;
+}
+
+svg {
+  background-color: #fcfcfc;
+}
+
+.positive {
+  background-color: #5cdacc;
+  /* padding: 3px; */
+}
+
+.negative {
+  background-color: #ff1d34;
+  /* padding: 3px; */
+}
+
+.balanced {
+  background-color: #ffc750;
+  /* padding: 3px; */
+}
+
+.informational {
+  background-color: #ff8c50;
+  /* padding: 3px; */
+}
+
+text {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+g.annotation-note {
+  font-size: 12px;
+}
+
+g.tick {
+  font-size: 12px;
+}
+
+text.label {
+  font-size: 12px;
+}
+
+#month-info {
+  margin-top: -16px;
+  margin-left: -30px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+}
