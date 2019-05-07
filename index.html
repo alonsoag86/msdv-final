@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>2016: A Year in News</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center justify-content-center"
+          id="title"
+        >
+          <h1 class="display-4">2016: A Year in News</h1>
+          <h3>Mexico Through the Lens of U.S. Media</h3>
+          <h4 class="subt">A visual essay by Alonso Alcocer</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5" id="left">
+          <p>
+            The latest U.S. Presidential Election delivered a shocking and
+            unexpected outcome that profoundly shaped the political, social and
+            economic landscape of the country. After the final result became
+            official, many took this as an opportunity to explore and
+            investigate what were the main reasons that could explain its
+            unlikely conclusion. It is safe to say that this campaign had a
+            profound impact in all of us.
+          </p>
+          <p>
+            As we find ourselves in the middle of a fractured political
+            landscape where we do not know for sure what are the consequences
+            that it will generate, I want to take us back to the beginning and I
+            want to share with you a view of the election through the eyes of
+            one of its closest allies: Mexico.
+          </p>
+          <p>
+            South of the Rio Grande, the bilateral relations between the U.S.
+            and Mexico, have suffered a major drawback that has jeopardized
+            years of close cooperation between the North American countries.
+          </p>
+          <p>
+            In this historical turning point I was part of the international
+            media analysis team of the former President of Mexico,
+            <a
+              class="anchor"
+              href="https://en.wikipedia.org/wiki/Enrique_Peña_Nieto"
+              target="_blank"
+              >Enrique Peña Nieto.</a
+            >
+            On a daily basis and throughout the whole year, our team was in
+            charge of monitoring over 200 media outlets from all over the world.
+            We created and maintained a comprehensive database of all the news
+            that were published about the country. This project is based on a
+            subset of that database that covers 67 U.S. media outlets and 7,815
+            articles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h4 class="subt" id="data-intro">The Data</h4>
+          <h5 id="example-title">
+            Trump vs.'Three Amigos': North America’s leaders meet while the
+            Donald slams NAFTA
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5" id="left">
+          <p>
+            It is June 29, 2016 and your boss, the President Of Mexico, is
+            meeting his counterparts of the U.S. and Canada in order to discuss
+            the future of one of the most important trade agreements in the
+            world. Part of your job consists on evaluating the tendency of the
+            articles that you read. After a couple of months you start noticing
+            trends and the tone of different media outlets. The example above is
+            the headline of an article wrote by VICE. If you had to classify it,
+            would you be able to say that this is a
+            <span class="positive">positive</span>,
+            <span class="negative">negative</span>,
+            <span class="balanced">balanced</span>, or a merely
+            <span class="informational">informational</span> article? It is hard
+            to tell just by looking at the title. In order to label it, you
+            would probably have to read the whole content.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#article-example"
+          >
+            Article
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="article-example"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="title-example"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="title-example">
+                    Trump vs. 'Three Amigos': North America’s leaders meet while
+                    the Donald slams NAFTA
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Before the much-vaunted 'Three Amigos' summit even formally
+                    begins on Wednesday, Canada, the United States, and Mexico
+                    have already rattled off a string of agreements.
+                  </p>
+
+                  <p>
+                    The tripartite conference between American President Barack
+                    Obama, Mexican President Enrique Peña Nieto and Prime
+                    Minister Justin Trudeau — who is hosting the affair — is the
+                    first time that Canada has played host to the annual summit
+                    in a decade, and comes as Donald Trump, the presumptive
+                    Republican nominee, takes sharper aim at the free trade deal
+                    that underpins continental cooperation.
+                  </p>
+
+                  <p>
+                    By all accounts, though, the summit has already been pretty
+                    productive.
+                  </p>
+
+                  <p>
+                    The three are planning to sign a pact to draw 50 percent of
+                    their electricity from renewable energy by 2025 — which is a
+                    bit moot for Canada, which already generates most of its
+                    power through "clean" sources — while Mexico has signed on
+                    to a methane-fighting climate pact that Ottawa and
+                    Washington already agreed to earlier this year.
+                  </p>
+
+                  <p>
+                    Canada, meanwhile, has agreed to lift a visa requirement for
+                    Mexican citizens in exchange for Mexico's removal of trade
+                    barriers that prevented Canadian beef from entering the
+                    country.
+                  </p>
+
+                  <p>
+                    The clean-energy pact promises to be big business for
+                    Canada, which is already setting itself up to be a huge
+                    clean energy exporter to the United States. Trudeau, when he
+                    was running for prime minister, repeatedly vowed to invest
+                    in clean energy infrastructure.
+                  </p>
+
+                  <p>
+                    As of 2015, over 60 percent of Canada's electricity comes
+                    from hydropower, with other renewable sources amounting to
+                    about five percent.
+                  </p>
+
+                  <p>
+                    Canada's energy surplus is worth about $4 billion in exports
+                    to the US each year, and that number is expected to grow
+                    significantly — especially thanks to agreements like the one
+                    that will be signed on Wednesday.
+                  </p>
+
+                  <p>
+                    But while the three leaders, all of whom are self-styled
+                    progressives, might be in relative consensus on climate
+                    change mitigation, it's unclear just how much this summit
+                    can do to bring the three countries closer together.
+                  </p>
+
+                  <p>
+                    With increasing focus on the human rights situation in
+                    Mexico, Amnesty International is calling on Obama and
+                    Trudeau to take a tough line on Peña Nieto when it comes to
+                    police violence and police corruption.
+                  </p>
+
+                  <p>
+                    An Amnesty International report released to coincide with
+                    the summit accuses Mexican military and police personnel of
+                    employing sexual assault and torture against women in the
+                    state's jails.
+                  </p>
+
+                  <p>
+                    "These women's stories paint an utterly shocking snapshot of
+                    the level of torture against women in Mexico, even by local
+                    standards. Sexual violence used as a form of torture seems
+                    to have become a routine part of interrogations," Erika
+                    Guevara-Rosas, Americas Director for the group, said in a
+                    press release.
+                  </p>
+
+                  <p>
+                    Trudeau, in a joint press conference with Peña Nieto on
+                    Tuesday afternoon, said he and his Mexican counterpart
+                    "discussed the need to uphold human rights, advance
+                    democracy and the rule of law and ensure respect for
+                    diversity as well as the ways in which we can work together
+                    to achieve these important goals."
+                  </p>
+
+                  <p>
+                    For Obama, this summit will be his last. If Republican
+                    presumptive nominee Donald Trump succeeds him, it might be
+                    the last Three Amigos, period. A Trump presidency would, if
+                    he's taken at his word, mean a shedding of the North
+                    American Free Trade Agreement (NAFTA) and the erecting of a
+                    wall on the Mexican border, for which Mexico would pick up
+                    the tab.
+                  </p>
+
+                  <p>
+                    "They're so used to having their own way," Trump said of
+                    America's neighbors in a speech on Tuesday in which he vowed
+                    to renegotiate NAFTA.
+                  </p>
+
+                  <p>
+                    "Not with Trump. They won't have their own way ... NAFTA was
+                    the worst trade deal in the history — it's, like, the
+                    history — of this country."
+                  </p>
+
+                  <p>
+                    Those provocative acts are sure to turn Ottawa and Mexico
+                    City from friends to foes.
+                  </p>
+
+                  <p>
+                    But even Democratic likely nominee Hillary Clinton has gone
+                    back-and-forth on whether she would ratify the Trans-Pacific
+                    Partnership (an agreement that Canada and Mexico have both
+                    pushed for) and whether she would re-open debate on NAFTA,
+                    the free-trade zone encompassing Canada, the US and Mexico.
+                  </p>
+
+                  <p>
+                    Trudeau wouldn't comment directly on the anti-trade rhetoric
+                    that is appearing in the American election, except to say
+                    that "we've seen around the world many examples of
+                    protectionism, of concern, of stepping away from trade
+                    agreements and engagements like we're showcasing today, and
+                    I think it's important that allies and partners like Mexico
+                    and Canada work together to address the challenges we're
+                    facing together."
+                  </p>
+
+                  <p>
+                    In advance of Obama's touch-down in Ottawa, huge sections of
+                    Ottawa have been closed to the public, with security
+                    dominating much of the capital's core.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5" id="left">
+          <p>
+            The negotiations of NAFTA were a major concern between the U.S.,
+            Canada and Mexico during the campaign. In this particular article we
+            can conclude that the three leaders achieved a positive consensus in
+            terms of commerce, energy consumption and immigration policies.
+            Nevertheless, the author of the article mentions the continuous
+            problems that Mexico has been facing regarding the abuse of human
+            rights, as well as the negative stance of the Republican Candidate
+            on NAFTA. This was, in our team's eyes, a balanced article. How does
+            2016 looks like from this perspective?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h4 class="subt" id="tendency-intro">The Year by Tendency</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container tendency-bar">
+      <div class="row">
+        <div class="col-8" id="tendency-month"></div>
+        <div class="col-4" id="month-info"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="tendency-viz"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid m-5">
+      <div class="row">
+        <div class="col-12" id="outlets-viz"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/tendency.js"></script>
+    <script src="./js/media.js"></script>
+    <!-- <script src="./js/theme.js"></script> -->
+  </body>
+</html>
