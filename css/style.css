@@ -128,3 +128,7 @@ text.label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
 }
+
+#outlets-viz {
+  margin-left: 110px;
+}
