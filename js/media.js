@@ -101,9 +101,7 @@ function outlets(newsData) {
     .attr('y', function(d) {
       return y(+d.total);
     })
-    .style('fill', function(d, i) {
-      return color(d.key);
-    });
+    .style('fill', 'black');
 }
 
 //   bars
