@@ -29,7 +29,7 @@ const yAxis = svg.append('g').attr('class', 'myYaxis');
 function update(selectedVar) {
   // Parse the Data
 
-  d3.csv('js/data/media_tendency.csv').then(function(data) {
+  d3.csv('js/media_tendency.csv').then(function(data) {
     data.forEach(function(d) {
       d.positive = +d.positive;
       d.negative = +d.negative;
