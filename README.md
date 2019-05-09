@@ -10,4 +10,5 @@ The following visual essay explores the behavior of the U.S. media at a historic
 
 ![key-image](1.png)
 ![key-image1](2.png)
-![key-image-3](3.png)
+![key-image1](3.png)
+![key-image-3](4.png)

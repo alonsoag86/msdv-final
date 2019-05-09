@@ -168,9 +168,44 @@ div.tooltip {
 }
 
 #outlets-viz {
-  margin-bottom: 110px;
+  margin-bottom: 85px;
 }
 
 button:focus {
   outline: 0;
+}
+
+.waffle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+}
+
+.block {
+  width: 5px;
+  height: 5px;
+  margin: 2px;
+}
+
+.theme-charts {
+  margin-left: 190px;
+  margin-bottom: 10px;
+}
+.theme-summary {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  margin-bottom: -80px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  padding-top: 25px;
+}
+
+.theme-title {
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  margin-top: 12px;
+  margin-left: -20px;
 }
