@@ -95,8 +95,9 @@
         >
           <h4 class="subt" id="data-intro">The Data</h4>
           <h5 id="example-title">
-            Trump vs.'Three Amigos': North America’s leaders meet while the
-            Donald slams NAFTA
+            <span class="balanced">Trump vs.'Three Amigos'</span>:
+            <span class="positive">North America’s leaders meet</span> while the
+            <span class="negative">Donald slams NAFTA</span>
           </h5>
         </div>
       </div>
@@ -133,7 +134,7 @@
           <!-- Button trigger modal -->
           <button
             type="button"
-            class="btn btn-primary"
+            class="btn"
             data-toggle="modal"
             data-target="#article-example"
           >
@@ -361,8 +362,12 @@
 
     <div class="container tendency-bar">
       <div class="row">
-        <div class="col-8" id="tendency-month"></div>
-        <div class="col-4" id="month-info"></div>
+        <div class="col-10" id="tendency-month"></div>
+        <div class="col-2 animated" id="month-info">
+          <h5>January</h5>
+          positive: 268 negative: 211 balanced: 146 informational: 159 total:
+          784
+        </div>
       </div>
     </div>
 
@@ -372,9 +377,86 @@
       </div>
     </div>
 
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5" id="left">
+          <p>
+            The capture of Joaquín "El Chapo" Guzmán represented a major victory
+            for the Government and it dominated the narrative during the first
+            months of the year. Nevertheless, on September, the Mexican
+            President, in one of the most
+            <a
+              class="anchor"
+              href="https://qz.com/770991/what-was-mexican-president-enrique-pena-nieto-thinking-with-his-trump-invitation/"
+              target="_blank"
+              >controversial</a
+            >
+            <a
+              class="anchor"
+              href="https://www.theatlantic.com/international/archive/2016/08/enrique-pena-nieto-trump-mexico-visit/498161/"
+              target="_blank"
+              >decisions</a
+            >
+            in the history of the bilateral relations between Mexico and the
+            U.S., extended an invitation to the Republican Candidate in a
+            desperate attempt to reconcile their contrasting points of view.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5 media-intro" id="left">
+          <p>
+            The visit of Candidate Trump was also the most covered event by the
+            international media about Mexico.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-auto" id="buttons">
+          <button class="positive p-2" onclick="update('positive')">
+            Positive
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="negative p-2" onclick="update('negative')">
+            Negative
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="balanced p-2" onclick="update('balanced')">
+            Balanced
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="informational p-2" onclick="update('informational')">
+            Informational
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="p-2" id="total-button" onclick="update('total')">
+            Total
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid m-5">
       <div class="row">
         <div class="col-12" id="outlets-viz"></div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-9 ml-5 media-intro" id="left">
+          <p></p>
+        </div>
       </div>
     </div>
 

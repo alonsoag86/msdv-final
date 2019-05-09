@@ -29,7 +29,8 @@ body {
 
 a:hover {
   text-decoration: none;
-  color: #02111b;
+  background-color: #02111b;
+  color: #fcfcfc;
 }
 
 #data-intro {
@@ -68,7 +69,7 @@ a:hover {
   margin-bottom: 35px;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background-color: #02111b;
   color: #fcfcfc;
 }
@@ -123,12 +124,48 @@ text.label {
 }
 
 #month-info {
-  margin-top: -16px;
-  margin-left: -30px;
+  margin-top: -5px;
+  margin-left: -70px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
 }
 
+.animated {
+  animation-duration: 3s;
+  animation-delay: 5.5s;
+}
+
+#tendency-viz {
+  margin-bottom: 130px;
+}
+
+.media-intro {
+  margin-bottom: 100px;
+}
+
+#total-button {
+  background-color: #bfc0c1;
+  color: #02111b;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 200px;
+  height: 165px;
+  padding: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font: 12px;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 #outlets-viz {
-  margin-left: 110px;
+  margin-bottom: 110px;
+}
+
+button:focus {
+  outline: 0;
 }

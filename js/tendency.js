@@ -1,4 +1,4 @@
-d3.csv('..msdv-final/data/final_all_news_16.csv')
+d3.csv('js/data/final_all_news_16.csv')
   .then(function(data) {
     // 1) read csv file
     // 2) make sure there are no errors
@@ -81,8 +81,8 @@ function tendencyMonth(newsData) {
   });
   // console.log(data);
 
-  const margin = { top: 50, right: 10, bottom: 80, left: 250 };
-  const width = 600 - margin.left - margin.right;
+  const margin = { top: 50, right: 10, bottom: 80, left: 170 };
+  const width = 1000 - margin.left - margin.right;
   const height = 200 - margin.top - margin.bottom;
 
   const svg = d3
@@ -114,9 +114,9 @@ function tendencyMonth(newsData) {
         .enter()
         .append('rect')
         .attr('class', 'bars')
-        .attr('width', 15)
+        .attr('width', 45)
         .attr('x', function(d, i) {
-          return i * 20;
+          return i * 50;
         })
         .attr('height', 0)
         .attr('y', height)
@@ -159,14 +159,29 @@ function tendencyMonth(newsData) {
           );
         })
         .on('mouseout', function(d) {
-          d3.select(this)
-            .transition()
-            .duration(600)
-            .style('fill', '#6D6875');
-          d3.select('#month-info').html('');
+          d3.select(this).style('fill', '#6D6875');
+          d3.select('#month-info').html(
+            '<h5>' +
+              d.month +
+              '</h5>' +
+              'positive: ' +
+              d.positive +
+              '<br>' +
+              'negative: ' +
+              d.negative +
+              '<br>' +
+              'balanced: ' +
+              d.balanced +
+              '<br>' +
+              'informational: ' +
+              d.informational +
+              '<br>' +
+              'total: ' +
+              d.total
+          );
         });
     },
-    offset: '15%',
+    offset: '5%',
   });
 }
 
@@ -351,6 +366,34 @@ function tendencyViz(newsData) {
           dy: -20,
           dx: -20,
         },
+        {
+          type: d3.annotationCalloutCircle,
+          note: {
+            title: '"El Chapo Guzmán" gets extradited to the U.S.',
+            wrap: 210,
+          },
+          subject: {
+            radius: 3,
+          },
+          x: 770,
+          y: 260,
+          dy: 60,
+          dx: -20,
+        },
+        {
+          type: d3.annotationCalloutCircle,
+          note: {
+            title: 'The Election reaches its conclusion',
+            wrap: 150,
+          },
+          subject: {
+            radius: 3,
+          },
+          x: 698,
+          y: 110,
+          dy: 50,
+          dx: -50,
+        },
       ].map(function(d) {
         d.color = '#02111b';
         return d;
@@ -372,7 +415,7 @@ function tendencyViz(newsData) {
         .ease(d3.easeExpIn)
         .attr('opacity', 1);
     },
-    offset: '30%',
+    offset: '15%',
   });
 
   svg
@@ -394,3 +437,13 @@ function tendencyViz(newsData) {
 
   svg.select('.legendOrdinal').call(legendOrdinal);
 }
+
+$('#month-info').css('opacity', 0);
+
+var waypoint = new Waypoint({
+  element: $('#month-info'),
+  handler: function(direction) {
+    $('#month-info').addClass('fadeInRight');
+  },
+  offset: '15%',
+});
