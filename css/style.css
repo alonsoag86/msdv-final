@@ -9,7 +9,7 @@ body {
   color: #02111b;
   font-family: Open Sans, Helvetica, sans-serif;
   background-color: #fcfcfc;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #title {
@@ -39,6 +39,7 @@ a:hover {
 
 #example-title {
   font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
   margin-bottom: 50px;
 }
 
@@ -79,8 +80,8 @@ a:hover {
   text-align: left;
 }
 
-.tendency-bar {
-  margin-top: 70px;
+.tendency-intro {
+  margin-bottom: 130px;
 }
 
 svg {
@@ -112,22 +113,22 @@ text {
 }
 
 g.annotation-note {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 g.tick {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 text.label {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 #month-info {
-  margin-top: -5px;
-  margin-left: -70px;
+  margin-top: -40px;
+  margin-left: -117px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .animated {
@@ -155,11 +156,15 @@ div.tooltip {
   height: 165px;
   padding: 20px;
   font-family: 'IBM Plex Mono', monospace;
-  font: 12px;
+  font-size: 11px;
   background: lightsteelblue;
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
+}
+
+.div-title {
+  font-size: 900px;
 }
 
 #outlets-viz {

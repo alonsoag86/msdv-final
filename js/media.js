@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
-const margin = { top: 50, right: 50, bottom: 140, left: 50 };
-const width = 1500 - margin.left - margin.right;
-const height = 550 - margin.top - margin.bottom;
+const margin = { top: 50, right: 50, bottom: 140, left: 180 };
+const width = 1100 - margin.left - margin.right;
+const height = 450 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3
@@ -71,6 +71,7 @@ function update(selectedVar) {
       .transition()
       .duration(1000)
       .call(d3.axisLeft(y));
+
     const waypoint = new Waypoint({
       element: $('#buttons'),
       handler: function() {
@@ -97,7 +98,7 @@ function update(selectedVar) {
             return y(d[selectedVar]);
           })
           .attr('stroke', 'grey')
-          .attr('stroke-width', 2);
+          .attr('stroke-width', 1);
 
         const colorScale = d3
           .scaleOrdinal()
@@ -128,7 +129,7 @@ function update(selectedVar) {
               .style('opacity', 0.9);
             div
               .html(
-                '<h6>' +
+                '<h6 "class:div-title">' +
                   d.media_outlet +
                   '</h6>' +
                   'total:' +
@@ -169,7 +170,7 @@ function update(selectedVar) {
           .attr('cy', function(d) {
             return y(d[selectedVar]);
           })
-          .attr('r', 8)
+          .attr('r', 6)
           .attr('fill', colorScale(selectedVar));
       },
       offset: '50%',

@@ -81,9 +81,9 @@ function tendencyMonth(newsData) {
   });
   // console.log(data);
 
-  const margin = { top: 50, right: 10, bottom: 80, left: 170 };
-  const width = 1000 - margin.left - margin.right;
-  const height = 200 - margin.top - margin.bottom;
+  const margin = { top: 15, right: 10, bottom: 35, left: 215 };
+  const width = 800 - margin.left - margin.right;
+  const height = 100 - margin.top - margin.bottom;
 
   const svg = d3
     .select('#tendency-month')
@@ -104,7 +104,7 @@ function tendencyMonth(newsData) {
     .range([height, 0]);
 
   const waypoint = new Waypoint({
-    element: $('#tendency-intro'),
+    element: $('#tendency-viz'),
     handler: function() {
       this.destroy();
 
@@ -114,9 +114,9 @@ function tendencyMonth(newsData) {
         .enter()
         .append('rect')
         .attr('class', 'bars')
-        .attr('width', 45)
+        .attr('width', 35)
         .attr('x', function(d, i) {
-          return i * 50;
+          return i * 40;
         })
         .attr('height', 0)
         .attr('y', height)
@@ -181,7 +181,7 @@ function tendencyMonth(newsData) {
           );
         });
     },
-    offset: '5%',
+    offset: '30%',
   });
 }
 
@@ -231,9 +231,9 @@ function tendencyViz(newsData) {
   //console.log(data);
 
   // Set all the parameters of our chart area
-  const margin = { top: 50, right: 50, bottom: 50, left: 175 };
-  const width = 1000 - margin.left - margin.right;
-  const height = 550 - margin.top - margin.bottom;
+  const margin = { top: 45, right: 50, bottom: 30, left: 210 };
+  const width = 950 - margin.left - margin.right;
+  const height = 470 - margin.top - margin.bottom;
 
   // Create the svg and the group thar is going to
   // hold our data
@@ -348,7 +348,7 @@ function tendencyViz(newsData) {
             radius: 3,
           },
           x: 5,
-          y: 140,
+          y: 119,
           dy: -30,
           dx: 50,
         },
@@ -361,8 +361,8 @@ function tendencyViz(newsData) {
           subject: {
             radius: 3,
           },
-          x: 530,
-          y: 30,
+          x: 480,
+          y: 26,
           dy: -20,
           dx: -20,
         },
@@ -375,10 +375,10 @@ function tendencyViz(newsData) {
           subject: {
             radius: 3,
           },
-          x: 770,
-          y: 260,
+          x: 685,
+          y: 232,
           dy: 60,
-          dx: -20,
+          dx: -3,
         },
         {
           type: d3.annotationCalloutCircle,
@@ -389,8 +389,8 @@ function tendencyViz(newsData) {
           subject: {
             radius: 3,
           },
-          x: 698,
-          y: 110,
+          x: 628,
+          y: 95,
           dy: 50,
           dx: -50,
         },
@@ -415,7 +415,7 @@ function tendencyViz(newsData) {
         .ease(d3.easeExpIn)
         .attr('opacity', 1);
     },
-    offset: '15%',
+    offset: '13%',
   });
 
   svg
