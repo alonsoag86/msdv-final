@@ -1,4 +1,4 @@
-d3.csv('js/final_all_news_16.csv')
+d3.csv('js/data/final_all_news_16.csv')
   .then(function(data) {
     // 1) read csv file
     // 2) make sure there are no errors
@@ -411,17 +411,17 @@ function tendencyViz(newsData) {
       d3.selectAll('.annotation-group')
         .attr('opacity', 0)
         .transition()
-        .duration(6450)
+        .duration(7850)
         .ease(d3.easeExpIn)
         .attr('opacity', 1);
     },
-    offset: '13%',
+    offset: '16%',
   });
 
   svg
     .append('g')
     .attr('class', 'legendOrdinal')
-    .attr('transform', 'translate(' + (width - 60) + ',' + '1)');
+    .attr('transform', 'translate(' + (width - 60) + ',' + '0.1)');
 
   legendOrdinal = d3
     .legendColor()
@@ -432,7 +432,7 @@ function tendencyViz(newsData) {
         .type(d3.symbolTriangle)
         .size(35)()
     )
-    .shapePadding(10)
+    .shapePadding(5)
     .scale(color);
 
   svg.select('.legendOrdinal').call(legendOrdinal);
@@ -440,7 +440,7 @@ function tendencyViz(newsData) {
 
 $('#month-info').css('opacity', 0);
 
-var waypoint = new Waypoint({
+const waypoint = new Waypoint({
   element: $('#month-info'),
   handler: function(direction) {
     $('#month-info').addClass('fadeInRight');

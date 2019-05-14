@@ -29,7 +29,7 @@ const yAxis = svg.append('g').attr('class', 'myYaxis');
 function update(selectedVar) {
   // Parse the Data
 
-  d3.csv('js/media_tendency.csv').then(function(data) {
+  d3.csv('js/data/media_tendency.csv').then(function(data) {
     data.forEach(function(d) {
       d.positive = +d.positive;
       d.negative = +d.negative;
@@ -73,7 +73,7 @@ function update(selectedVar) {
       .call(d3.axisLeft(y));
 
     const waypoint = new Waypoint({
-      element: $('#buttons'),
+      element: $('.buttons'),
       handler: function() {
         this.destroy();
 
@@ -85,7 +85,7 @@ function update(selectedVar) {
           .attr('class', 'myLine')
           .merge(j)
           .transition()
-          .duration(1000)
+          .duration(2000)
           .attr('x1', function(d) {
             //console.log(x(d.media_outlet));
             return x(d.media_outlet);
@@ -163,7 +163,7 @@ function update(selectedVar) {
           })
           .merge(u)
           .transition()
-          .duration(1000)
+          .duration(2000)
           .attr('cx', function(d) {
             return x(d.media_outlet);
           })
