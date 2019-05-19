@@ -27,12 +27,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<<<<<<< HEAD
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script> -->
+=======
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div
+<<<<<<< HEAD
           class="col-12 d-flex flex-column align-items-center justify-content-center"
           id="title"
         >
@@ -40,12 +44,35 @@
           <h3>Mexico Through the Lens of U.S. Media</h3>
           <h4 class="subt">A visual essay by Alonso Alcocer</h4>
         </div>
+=======
+          class="col-lg-8 d-flex flex-column align-items-center justify-content-center p-5"
+          id="title"
+        >
+          <h1 class="display-5">2016: A Year in News</h1>
+          <h4>Mexico Through the Lens of U.S. Media</h4>
+          <h4 class="subt">A visual essay by Alonso Alcocer</h4>
+        </div>
+        <div
+          class="col-lg-4 d-flex flex-column align-items-center justify-content-center"
+          id="headlines-holder"
+        >
+          <div class="sliderp"></div>
+          <div class="slidern"></div>
+          <div class="sliderb"></div>
+          <div class="slideri"></div>
+        </div>
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
       </div>
     </div>
 
     <div class="container">
+<<<<<<< HEAD
       <div class="row justify-content-center">
         <div class="col-9 ml-5" id="left">
+=======
+      <div class="row">
+        <div class="col-lg-6 align">
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
           <p>
             The latest U.S. Presidential Election delivered a shocking and
             unexpected outcome that profoundly shaped the political, social and
@@ -56,6 +83,7 @@
             profound impact in all of us.
           </p>
           <p>
+<<<<<<< HEAD
             As we find ourselves in the middle of a fractured political
             landscape where we do not know for sure what are the consequences
             that it will generate, I want to take us back to the beginning and I
@@ -66,6 +94,17 @@
             South of the Rio Grande, the bilateral relations between the U.S.
             and Mexico, have suffered a major drawback that has jeopardized
             years of close cooperation between the North American countries.
+=======
+            As we find ourselves in the midst of a fractured political
+            landscape, I want to take us back to the beginning and I want to
+            share with you a view of the election through the eyes of one of its
+            closest allies: Mexico.
+          </p>
+          <p>
+            South of the Rio Grande, the bilateral relations between the U.S.
+            and Mexico, suffered a major drawback that has jeopardized years of
+            close cooperation between the North American countries.
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
           </p>
           <p>
             In this historical turning point I was part of the international
@@ -78,15 +117,48 @@
             >
             On a daily basis and throughout the whole year, our team was in
             charge of monitoring over 200 media outlets from all over the world.
+<<<<<<< HEAD
             We created and maintained a comprehensive database of all the news
             that were published about the country. This project is based on a
             subset of that database that covers 67 U.S. media outlets and 7,815
             articles.
+=======
+          </p>
+        </div>
+
+        <div class="col-lg-6 align">
+          <p>
+            Our main responsibility was to create and maintain a comprehensive
+            database of all the news that were published about the country. This
+            project is based on a subset of that database that covers 67 U.S.
+            media outlets and 7,815 articles.
+          </p>
+          <p>
+            The most important component of this database is the labelling of
+            the news according to their tendency. The classification system
+            consists on four different categories:&nbsp
+            <span class="positive labels">positive</span>
+            <span class="negative labels">negative</span>
+            <span class="balanced labels">balanced</span> and
+            <span class="informational labels">informational</span>
+          </p>
+          <p>
+            In certain occasions, the explicit nature of the headline can
+            provide us with all the information we need so we can determine the
+            category for a particular piece.
+          </p>
+          <p>
+            While this tends to be true for certain cases, our labelling process
+            requires more context and that means reading the whole content of
+            the articles. Let us explore an example of each category in order to
+            see how that process worked.
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
           </p>
         </div>
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="container mt-4">
       <div class="row">
         <div
@@ -120,10 +192,160 @@
             to tell just by looking at the title. In order to label it, you
             would probably have to read the whole content.
           </p>
+=======
+    <div class="container modal-example">
+      <div class="row" data-toggle="modal" data-target="#posModal">
+        <div
+          class="col-12 ml-3 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="example-title" data-target="#posExample" data-slide-to="0">
+            <span class="positive">
+              "Drug Lord ‘El Chapo’ Has Been Caught, Says Mexican President"
+            </span>
+          </h5>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="posModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div
+                id="posExample"
+                class="carousel slide"
+                data-ride="carousel"
+                data-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5 class="text-center">
+                      <span class="positive">Positive</span>
+                    </h5>
+                    <img
+                      class="d-block w-100 carousel-image"
+                      src="./js/images/positive.png"
+                      alt="First slide"
+                    />
+                  </div>
+
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      Positive articles tend to share with the reader Government
+                      milestones that show progress in the development of public
+                      policies, events that praise Mexico's cultural heritage,
+                      or the reinforcement of commercial ties and agreements
+                      that will benefit the economy.
+                    </p>
+                    <p class="carousel-description">
+                      Articles about the war on drugs and the Mexican Cartels
+                      gravitate towards the negative side of the spectrum.
+                      Nevertheless, here we have an example of a piece that
+                      acknowledges the work of the military and the police. More
+                      importantly, it also quotes the Mexican President and the
+                      DEA highlighting the importance of capturing the most
+                      important drug trafficker.
+                    </p>
+                  </div>
+
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      '...<span class="positive"
+                        >Peña Nieto praised law enforcement in a televised
+                        speech</span
+                      >
+                      Friday afternoon, saying the arrest was
+                      <span class="positive"
+                        >a result of months of intelligence-gathering</span
+                      >
+                      that eventually allowed authorities to penetrate Guzmán’s
+                      operation.'
+                    </p>
+                    <p class="carousel-description">
+                      ...“Today, Mexico confirms that its institutions
+                      <span class="positive">
+                        have the necessary capability to confront and
+                        overcome</span
+                      >
+                      those who threaten the safety of Mexican families,” Peña
+                      Nieto said.
+                    </p>
+                    <p class="carousel-description">
+                      <span class="positive"
+                        >...'The U.S. Drug Enforcement Administration praised
+                        Mexican officials</span
+                      >
+                      on Friday for recapturing Guzmán, saying the agency was
+                      “extremely pleased” with the arrest.'
+                    </p>
+                    <p class="carousel-description">
+                      You can read the whole article
+                      <a
+                        class="anchor"
+                        href="https://www.huffpost.com/entry/el-chapo-caught_n_568ffee3e4b0c8beacf6d665"
+                        target="_blank"
+                        >here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="control carousel-control-prev"
+                  href="#posExample"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="control carousel-control-next"
+                  href="#posExample"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
         </div>
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="container mt-4">
       <div class="row">
         <div
@@ -325,11 +547,490 @@
                 </div>
               </div>
             </div>
+=======
+    <div class="container">
+      <div class="row" data-toggle="modal" data-target="#nModal">
+        <div
+          class="col-12 ml-4 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="example-title" data-target="#nExample" data-slide-to="0">
+            <span class="negative">
+              What was Mexican president Enrique Peña Nieto thinking with his
+              Trump invitation?
+            </span>
+          </h5>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="nModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div
+                id="nExample"
+                class="carousel slide"
+                data-ride="carousel"
+                data-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5 class="text-center">
+                      <span class="negative">Negative</span>
+                    </h5>
+                    <img
+                      class="d-block w-100 carousel-image"
+                      src="./js/images/negative.png"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      Negative stories are on the opposite side of the spectrum.
+                      Security problems related to the war against the Mexican
+                      Cartels, human right violations, corruption scandals,
+                      violence against women and journalists are common amongst
+                      this category.
+                    </p>
+                    <p class="carousel-description">
+                      2016 brought with it a new set of challenges that prompted
+                      the Mexican Government to adopt extreme measures in order
+                      to mitigate the negative effect of the U.S. Presidential
+                      Campaign.
+                    </p>
+                    <p class="carousel-description">
+                      Here we can see an example where the Mexican President, in
+                      one of the most controversial decisions in the history of
+                      the bilateral relations between Mexico and the U.S.,
+                      extended an invitation to the Republican Candidate in a
+                      desperate attempt to reconcile their contrasting points of
+                      view. This action was heavily criticized in both sides of
+                      the border and it was even qualified as treason by many
+                      politicians, analysts and experts.
+                    </p>
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      '...Why would Peña Nieto extend an invitation to a man so
+                      reviled in Mexico that his likeness is regularly whacked
+                      with piñata sticks, someone he previously likened to
+                      Mussolini and Hitler?
+                      <span class="negative"
+                        >Is he living up to the dimwit persona that Mexicans
+                        love to meme?</span
+                      >
+                      Or is this a calculated move to
+                      <span class="negative"
+                        >divert attention from his abysmal approval
+                        ratings?</span
+                      >'
+                    </p>
+                    <p class="carousel-description">
+                      'Bad news have been cascading over the Mexican presidency
+                      in past days. A recent media investigation revealed that
+                      Peña Nieto
+                      <span class="negative"
+                        >plagiarized his law school thesis</span
+                      >. The country’s murder rate has
+                      <span>spiked to its highest level since 2012</span>.
+                      Meanwhile, Mexico’s economy
+                      <span class="negative"
+                        >contracted for the first time in three years</span
+                      >.'
+                    </p>
+                    <p class="carousel-description">
+                      You can read the whole article
+                      <a
+                        class="anchor"
+                        href="https://qz.com/770991/what-was-mexican-president-enrique-pena-nieto-thinking-with-his-trump-invitation/"
+                        target="_blank"
+                        >here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="control carousel-control-prev"
+                  href="#nExample"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="control carousel-control-next"
+                  href="#nExample"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="container">
+      <div class="row" data-toggle="modal" data-target="#bModal">
+        <div
+          class="col-12 ml-4 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="example-title" data-target="#bExample" data-slide-to="0">
+            <span class="balanced">
+              Trump vs. ‘Three Amigos’: North America’s leaders meet while the
+              Donald slams NAFTA
+            </span>
+          </h5>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="bModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div
+                id="bExample"
+                class="carousel slide"
+                data-ride="carousel"
+                data-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5 class="text-center">
+                      <span class="balanced">Balanced</span>
+                    </h5>
+                    <img
+                      class="d-block w-100 carousel-image"
+                      src="./js/images/balanced.png"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      Balanced news are the most complex. Usually they share
+                      with the reader a positive outcome of an event that is
+                      negative in nature. The most common news that fall within
+                      this category talk about small recoveries in the economy
+                      that were not as good as expected; the capture of
+                      smugglers and criminals but reminding the reader of the
+                      dire state of insecurity in the country; or articles that
+                      share the opinion of experts that counterbalance a
+                      statement by a member of the Cabinet or the President
+                      himself.
+                    </p>
+                    <p class="carousel-description">
+                      Here we have a story about the negotiations of NAFTA. The
+                      nature of the treaty was a major concern between the U.S.,
+                      Canada and Mexico during the campaign. In this particular
+                      article we can read that the three leaders achieved a
+                      positive consensus in terms of commerce, energy
+                      consumption and immigration policies. Nevertheless, the
+                      author of the piece mentions the continuous problems that
+                      Mexico has been facing regarding the abuse of human
+                      rights, as well as the negative stance of the Republican
+                      Candidate on NAFTA.
+                    </p>
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      'Before the much-vaunted 'Three Amigos' summit even
+                      formally begins on Wednesday, Canada, the United States,
+                      and Mexico have
+                      <span class="positive"
+                        >already rattled off a string of agreements</span
+                      >.'
+                    </p>
+                    <p class="carousel-description">
+                      'Canada, meanwhile, has agreed to
+                      <span class="positive"
+                        >lift a visa requirement for Mexican citizens</span
+                      >
+                      in exchange for Mexico's removal of trade barriers that
+                      prevented Canadian beef from entering the country.'
+                    </p>
+                    <p class="carousel-description">
+                      'With increasing focus on the human rights situation in
+                      Mexico, Amnesty International is calling on Obama and
+                      Trudeau to take a tough line on Peña Nieto when it comes
+                      to
+                      <span class="negative"
+                        >police violence and police corruption</span
+                      >.'
+                    </p>
+                    <p class="carousel-description">
+                      'For Obama, this summit will be his last. If Republican
+                      presumptive nominee Donald Trump succeeds him, it might be
+                      the last Three Amigos, period. A Trump presidency would,
+                      if he's taken at his word, mean
+                      <span class="negative"
+                        >a shedding of the North American Free Trade Agreement
+                        (NAFTA)</span
+                      >
+                      and the
+                      <span class="negative"
+                        >erecting of a wall on the Mexican border, for which
+                        Mexico would pick up the tab.</span
+                      >'
+                    </p>
+                    <p class="carousel-description">
+                      You can read the whole article
+                      <a
+                        class="anchor"
+                        href="https://news.vice.com/en_us/article/bjkkvq/trump-vs-three-amigos-north-americas-leaders-meet-while-the-donald-slams-nafta"
+                        target="_blank"
+                        >here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="control carousel-control-prev"
+                  href="#bExample"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="control carousel-control-next"
+                  href="#bExample"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container last-modal">
+      <div class="row" data-toggle="modal" data-target="#iModal">
+        <div
+          class="col-12 ml-3 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="example-title" data-target="#iExample" data-slide-to="0">
+            <span class="informational">
+              DOT tentatively approves Delta, Aeromexico venture for Mexico
+            </span>
+          </h5>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="iModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div
+                id="iExample"
+                class="carousel slide"
+                data-ride="carousel"
+                data-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5 class="text-center">
+                      <span class="informational">Informational</span>
+                    </h5>
+                    <img
+                      class="d-block w-100 carousel-image"
+                      src="./js/images/informational.png"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      Articles that are informational generally provide the
+                      reader with information that does not add any
+                      interpretation or extra analysis by the author. Normally,
+                      the newspapers will share information on the current
+                      exchange rate between the Mexican Peso and the U.S.
+                      Dollar; the current state of a hurricane or tropical
+                      storm; a story about a Mexican celebrity; or the activity
+                      of a private company that does not have any major
+                      repercussions in the macroeconomic landscape of the
+                      country.
+                    </p>
+                    <p class="carousel-description">
+                      In this particular case the article shares with the reader
+                      the circumstances in which Aeromexico and Delta were able
+                      to materialize an agreement with the Transportation
+                      Department that allows them to jointly market and provide
+                      their services between the U.S. and Mexico. Although they
+                      mention the high volume of passengers that travel between
+                      the two countries, they do not provide additional
+                      information regarding touristic destinations or business
+                      opportunities.
+                    </p>
+                  </div>
+                  <div class="carousel-item col-10 align">
+                    <p class="carousel-description">
+                      'Delta Air Lines will be able to
+                      <span class="informational"
+                        >jointly market and provide flights with Aeromexico
+                        between the U.S. and Mexico</span
+                      >
+                      , under the Transportation Department’s tentative approval
+                      Friday.'
+                    </p>
+
+                    <p class="carousel-description">
+                      '<span class="informational"
+                        >The airlines already combine to carry about one in four
+                        passengers between the two countries</span
+                      >
+                      The approval would allow them to jointly carry more
+                      passengers than either American Airlines or United
+                      Airlines, which each carry more than one in five travelers
+                      between the countries.'
+                    </p>
+
+                    <p class="carousel-description">
+                      '<span class="informational">
+                        Nearly 26.6 million people flew between the U.S. and
+                        Mexico during the year that ended June 30</span
+                      >. Of those, Aeromexico carried nearly 3.6 million and
+                      Delta carried nearly 3.2 million.'
+                    </p>
+
+                    <p class="carousel-description">
+                      You can read the whole article
+                      <a
+                        class="anchor"
+                        href="https://www.usatoday.com/story/travel/flights/todayinthesky/2016/11/04/dot-tentatively-approves-delta-aeromexico-venture-mexico/93291564/"
+                        target="_blank"
+                        >here</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="control carousel-control-prev"
+                  href="#iExample"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="control carousel-control-next"
+                  href="#iExample"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
+          </div>
+        </div>
+      </div>
+    </div>
+
+<<<<<<< HEAD
     <div class="container mt-4">
       <div class="row justify-content-center">
         <div class="col-9 ml-5" id="left">
@@ -343,6 +1044,26 @@
             rights, as well as the negative stance of the Republican Candidate
             on NAFTA. This was, in our team's eyes, a balanced article. How does
             2016 looks like from this perspective?
+=======
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align">
+          <p>
+            Now that we have looked at different examples that can help us
+            understand the workflow and the thought process that goes into the
+            categorization of our articles, we can begin our exploration of the
+            data. What follows is a set of three different visualizations that
+            will distill the year into three main components:
+          </p>
+        </div>
+        <div class="col-lg-6 align">
+          <p>
+            First, a time series visualization that follows the trends of the
+            articles based on their tendency. The second breaks down the year in
+            themes and the way they were perceived during 2016. The final
+            visualization piece looks at the top 24 U.S. publishers of 2016 and
+            the distribution of their coverage based on tendency.
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
           </p>
         </div>
       </div>
@@ -351,7 +1072,11 @@
     <div class="container mt-4">
       <div class="row">
         <div
+<<<<<<< HEAD
           class="col-12 d-flex flex-column align-items-center justify-content-center"
+=======
+          class="col-lg-12 d-flex flex-column align-items-center justify-content-center tendency-intro"
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
         >
           <h4 class="subt" id="tendency-intro">The Year by Tendency</h4>
         </div>
@@ -360,23 +1085,347 @@
 
     <div class="container tendency-bar">
       <div class="row">
+<<<<<<< HEAD
         <div class="col-8" id="tendency-month"></div>
         <div class="col-4" id="month-info"></div>
+=======
+        <div class="col-lg-10" id="tendency-month"></div>
+        <div class="col-lg-2 animated" id="month-info">
+          <h5>January</h5>
+          positive: 268 <br />
+          negative: 211 <br />
+          balanced: 146 <br />
+          informational: 159 <br />
+          total: 784
+        </div>
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
       </div>
     </div>
 
     <div class="container">
       <div class="row">
+<<<<<<< HEAD
         <div class="col-12" id="tendency-viz"></div>
       </div>
     </div>
 
     <div class="container-fluid m-5">
+=======
+        <div class="col-lg-12" id="tendency-viz"></div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="align">
+            The capture of Joaquín "El Chapo" Guzmán represented a major victory
+            for the Government and it dominated the narrative during the first
+            months of the year. On February we notice a spike in the negative
+            coverage after the Pope's visit to Mexico. During his trip, the
+            religious leader met with victims of human rights abuses, reflected
+            on the exploitation of migrants and the state of insecurity in the
+            country. Throughout the year the Mexican Peso suffered major
+            drawbacks as the Republican Candidate gained more strength during
+            the Presidential Campaign. This also prompted several corporations
+            to put on hold previously planned investments in Mexico.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <p class="align">
+            On September, after the Mexican President extended an invitation to
+            the Republican Candidate in a desperate attempt to reconcile their
+            contrasting points of view, Mexico became the main focus of
+            international media. This unprecedented event coincided with recent
+            polling results that recorded a new low for the President's
+            popularity. Towards the end of the year we can see a positive
+            resurgence after Joaquín "El Chapo" Guzmán got extradited to the
+            U.S. Finally, after the victory of the Republican Candidate, many
+            media outlets questioned the viability of his proposition to build a
+            border wall and getting rid of NAFTA, this particular analysis
+            caused the major spike in balanced news towards the end of the year.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div
+          class="col-lg-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h4 class="subt" id="theme-intro">The Year by Themes</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5 ">
+      <div class="row theme-charts align-items-center justify-content-center">
+        <div class="col-lg-2 waffle" id="s-positive"></div>
+        <div class="col-lg-2 waffle" id="s-negative"></div>
+        <div class="col-lg-2 waffle" id="s-balanced"></div>
+        <div class="col-lg-2 waffle" id="s-informational"></div>
+        <div class="col-lg-2 theme-title">
+          SECURITY
+          <br />
+          <br />
+          2371 total
+          <br />
+          15% positive
+          <br />
+          51% negative
+          <br />
+          20% balanced
+          <br />
+          14% informational
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+      <div class="row theme-charts align-items-center justify-content-center">
+        <div class="col-lg-2 waffle" id="p-positive"></div>
+        <div class="col-lg-2 waffle" id="p-negative"></div>
+        <div class="col-lg-2 waffle" id="p-balanced"></div>
+        <div class="col-lg-2 waffle" id="p-informational"></div>
+        <div class="col-lg-2 theme-title">
+          POLITICS
+          <br />
+          <br />
+          1813 total
+          <br />
+          22% positive
+          <br />
+          35% negative
+          <br />
+          25% balanced
+          <br />
+          18% informational
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+      <div class="row theme-charts align-items-center justify-content-center">
+        <div class="col-lg-2 waffle" id="e-positive"></div>
+        <div class="col-lg-2 waffle" id="e-negative"></div>
+        <div class="col-lg-2 waffle" id="e-balanced"></div>
+        <div class="col-lg-2 waffle" id="e-informational"></div>
+        <div class="col-lg-2 theme-title">
+          ECONOMY
+          <br />
+          <br />
+          1525 total
+          <br />
+          31% positive
+          <br />
+          26% negative
+          <br />
+          28% balanced
+          <br />
+          15% informational
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+      <div class="row theme-charts align-items-center justify-content-center">
+        <div class="col-lg-2 waffle" id="st-positive"></div>
+        <div class="col-lg-2 waffle" id="st-negative"></div>
+        <div class="col-lg-2 waffle" id="st-balanced"></div>
+        <div class="col-lg-2 waffle" id="st-informational"></div>
+        <div class="col-lg-2 theme-title ">
+          SOCIAL/TOURISM
+          <br />
+          <br />
+          1446 total
+          <br />
+          44% positive
+          <br />
+          20% negative
+          <br />
+          14% balanced
+          <br />
+          22% informational
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+      <div
+        class="row theme-charts align-items-center justify-content-center last-waffle"
+      >
+        <div class="col-lg-2 waffle" id="pr-positive"></div>
+        <div class="col-lg-2 waffle" id="pr-negative"></div>
+        <div class="col-lg-2 waffle" id="pr-balanced"></div>
+        <div class="col-lg-2 waffle" id="pr-informational"></div>
+        <div class="col-lg-2 theme-title ">
+          PRESIDENT
+          <br />
+          <br />
+          660 total
+          <br />
+          28% positive
+          <br />
+          44% negative
+          <br />
+          23% balanced
+          <br />
+          5% informational
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="align">
+            Despite the fact that this was a very unusual year full with
+            political and diplomatic challenges, the main focal point of the
+            majority of the stories revolved around security issues. Since
+            former President Felipe Calderón declared war against the drug
+            cartels in 2006, thousands of people die every year in what has been
+            an unsuccessful strategy. Several human rights organizations have
+            also pointed out that this war has led to many extrajudicial
+            killings, and forced disappearances. Political stories concentrated
+            on the diplomatic challenges between the U.S. and Mexico and the
+            previously mentioned visit of the Republican Candidate. Even though
+            the state of NAFTA was challenged during the campaign causing the
+            constant fluctuation of the Mexican Peso, several car manufacturers
+            such as VW, BMW, Ford and Toyota reiterated their commitment to
+            invest in the country.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <p class="align">
+            Another positive point during this year was the increasing number of
+            tourists that Mexico received. Despite the damaging rhetoric of the
+            campaign, 2016 saw an increase in the number of U.S. visitors to the
+            country. Finally, the lack of popularity of the President was
+            reflected in the negative coverage of the Office. The image of the
+            President suffered great damage before the visit of Candidate Trump.
+            During the year it was published that he plagiarized his
+            dissertation, the strategy he pursued against the drug cartels did
+            not work and we saw an increase in the number of casualties, and the
+            First Lady was involved in a corruption scandal after she spend some
+            time in the apartment of a wealthy businessman that won a public
+            bidding round to develop a major infrastructure project in Mexico.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div
+          class="col-lg-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h4 class="subt" id="theme-intro">The top 24</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-auto buttons">
+          <button class="positive p-2" onclick="update('positive')">
+            Positive
+          </button>
+        </div>
+        <div class="col-auto buttons">
+          <button class="negative p-2" onclick="update('negative')">
+            Negative
+          </button>
+        </div>
+        <div class="col-auto buttons">
+          <button class="balanced p-2" onclick="update('balanced')">
+            Balanced
+          </button>
+        </div>
+        <div class="col-auto buttons">
+          <button class="informational p-2" onclick="update('informational')">
+            Informational
+          </button>
+        </div>
+        <div class="col-auto buttons">
+          <button class="p-2" id="total-button" onclick="update('total')">
+            Total
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
       <div class="row">
         <div class="col-12" id="outlets-viz"></div>
       </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="align">
+            It is not surprising to see Univision at the top of the list since
+            it is the largest provider of Spanish language content in the U.S.
+            Although they concentrate on generating television content, their
+            website publishes almost daily about the current situation in
+            Mexico. Huffington Post operates in Mexico and the majority of the
+            publications that we gathered are in spanish. La Opinión is the
+            largest Spanish language newspaper in the U.S. and their main
+            readers are located in the California region. Given the number of
+            Mexican immigrants that live there, it is also expected to see this
+            outlet up there in the list. Bloomberg is the first agency that we
+            have in our list that produces their content in English and follows
+            closely the economic side of the country.
+          </p>
+        </div>
+        <div class="col-lg-6 finalp">
+          <p class="align">
+            The Wall Street Journal is the most balanced and positive amongst
+            the top tier newspapers (NYT, Washington Post, WSJ), whilst the NYT
+            is the most negative even though it publishes less articles than the
+            WSJ over the year. The most important aspect to notice in this graph
+            is the fact that, with the exception of the LA Times and La Opinión,
+            the majority of the news published by the media outlets along border
+            (Arizona Daily Star, San Diego Union Tribune, Dallas Morning News,
+            Houston Chronicle and San Antonio Express News) were positive. The
+            main reason behind this trend is the fact that their economies are
+            closely interconnected to Mexico as a consequence on NAFTA, and the
+            population stands against the expropriation of their land by the
+            Federal Government in order to build a border wall.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr class="styled" />
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="align">
+            <small
+              >This work was made possible thanks to the collaboration of my
+              former teammates back in Mexico and my former boss who granted me
+              permission to use the data we gathered during this year.
+            </small>
+          </p>
+          <p class="align">
+            <small
+              >This work was made by
+              <a class="anchor" href="mailto: guemez.alonso@gmail.com"
+                >Alonso Alcocer</a
+              >
+              as part of the final project at the Masters of Science in Data
+              Visualization at Parsons School of Design – The New School.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -392,8 +1441,16 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+<<<<<<< HEAD
     <script src="./js/tendency.js"></script>
     <script src="./js/media.js"></script>
     <!-- <script src="./js/theme.js"></script> -->
+=======
+    <script src="./js/hMarquee.js"></script>
+    <script src="./js/marquee.js"></script>
+    <script src="./js/tendency.js"></script>
+    <script src="./js/media.js"></script>
+    <script src="./js/themes.js"></script>
+>>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
   </body>
 </html>
