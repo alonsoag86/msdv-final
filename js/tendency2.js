@@ -1,8 +1,33 @@
-<<<<<<< HEAD
-d3.csv('../data/final_all_news_16.csv')
-=======
-d3.csv('js/data/final_all_news_16.csv')
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
+///////////////////////////
+////// modal image ////////
+//////////////////////////
+
+const modals = document.getElementsByClassName('imgModal');
+const modal = Array.from(modals);
+const getImages = document.getElementsByClassName('tendency-image');
+const images = Array.from(getImages);
+const modalImgs = document.getElementsByClassName('modal-img');
+const modalImg = Array.from(modalImgs);
+// const captionTexts = document.getElementsByClassName('caption');
+// const captionText = Array.from(captionTexts);
+
+images.forEach(image => {
+  image.onmouseover = function() {
+    modal[0].style.display = 'block';
+    modalImg[0].src = this.src;
+    // captionText[0].style.display = 'block';
+  };
+});
+
+modalImg[0].onmouseout = () => {
+  modal[0].style.display = 'none';
+};
+
+///////////////////////////
+/// start visualization ///
+//////////////////////////
+
+d3.csv('./data/all_news_16.csv')
   .then(function(data) {
     // 1) read csv file
     // 2) make sure there are no errors
@@ -15,7 +40,6 @@ d3.csv('js/data/final_all_news_16.csv')
       d.tier = +d.tier;
       d.media_month = +d.media_month;
       d.media_year = +d.media_year;
-      d.media_tendency = +d.media_tendency;
       d.tendency_month = +d.tendency_month;
       d.tendency_year = +d.tendency_year;
       d.theme_month = +d.theme_month;
@@ -27,9 +51,10 @@ d3.csv('js/data/final_all_news_16.csv')
       d.theme_month_percentage = +d.theme_month_percentage;
       d.theme_year_percentage = +d.theme_year_percentage;
     });
-    // console.log(data);
+    //console.log(data);
     tendencyViz(data);
     tendencyMonth(data);
+    headlines(data);
   })
   .catch(function(error) {
     console.log(error);
@@ -65,7 +90,7 @@ function tendencyMonth(newsData) {
   // index 0 and an object with all the information for each
   // tendency value as index 1
   const tendencyValues = Object.entries(newsNested);
-  // console.log(tendencyValues);
+  console.log(tendencyValues[1][1].Negative[0].tendency_month_percentage);
 
   // Final Structure for the line chart
   const data = tendencyValues.map(function(month) {
@@ -85,18 +110,12 @@ function tendencyMonth(newsData) {
   });
   // console.log(data);
 
-<<<<<<< HEAD
-  const margin = { top: 50, right: 10, bottom: 80, left: 250 };
-  const width = 600 - margin.left - margin.right;
+  const margin = { top: 50, right: 10, bottom: 80, left: 50 };
+  const width = 500 - margin.left - margin.right;
   const height = 200 - margin.top - margin.bottom;
-=======
-  const margin = { top: 15, right: 10, bottom: 35, left: 215 };
-  const width = 800 - margin.left - margin.right;
-  const height = 100 - margin.top - margin.bottom;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 
   const svg = d3
-    .select('#tendency-month')
+    .select('#tendency_month')
     .append('svg')
     .attr('width', width + margin.right + margin.left)
     .attr('height', height + margin.top + margin.bottom)
@@ -106,7 +125,7 @@ function tendencyMonth(newsData) {
   const max = d3.max(data, function(d) {
     return +d.total;
   });
-  //   console.log(max);
+  //console.log(max);
 
   const y = d3
     .scaleLinear()
@@ -114,12 +133,8 @@ function tendencyMonth(newsData) {
     .range([height, 0]);
 
   const waypoint = new Waypoint({
-<<<<<<< HEAD
-    element: $('#tendency-intro'),
-=======
-    element: $('#tendency-viz'),
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
-    handler: function() {
+    element: $('#start-tviz'),
+    handler: function(direction) {
       this.destroy();
 
       const bars = svg
@@ -128,15 +143,9 @@ function tendencyMonth(newsData) {
         .enter()
         .append('rect')
         .attr('class', 'bars')
-<<<<<<< HEAD
         .attr('width', 15)
         .attr('x', function(d, i) {
           return i * 20;
-=======
-        .attr('width', 35)
-        .attr('x', function(d, i) {
-          return i * 40;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
         })
         .attr('height', 0)
         .attr('y', height)
@@ -158,10 +167,10 @@ function tendencyMonth(newsData) {
       bars
         .on('mouseover', function(d) {
           d3.select(this).style('fill', '#D3D3D3');
-          d3.select('#month-info').html(
-            '<h5>' +
+          d3.select('#month_info').html(
+            '<h4>' +
               d.month +
-              '</h5>' +
+              '</h4>' +
               'positive: ' +
               d.positive +
               '<br>' +
@@ -179,40 +188,14 @@ function tendencyMonth(newsData) {
           );
         })
         .on('mouseout', function(d) {
-<<<<<<< HEAD
           d3.select(this)
             .transition()
             .duration(600)
             .style('fill', '#6D6875');
-          d3.select('#month-info').html('');
+          d3.select('#month_info').html('');
         });
     },
-    offset: '15%',
-=======
-          d3.select(this).style('fill', '#6D6875');
-          d3.select('#month-info').html(
-            '<h5>' +
-              d.month +
-              '</h5>' +
-              'positive: ' +
-              d.positive +
-              '<br>' +
-              'negative: ' +
-              d.negative +
-              '<br>' +
-              'balanced: ' +
-              d.balanced +
-              '<br>' +
-              'informational: ' +
-              d.informational +
-              '<br>' +
-              'total: ' +
-              d.total
-          );
-        });
-    },
-    offset: '30%',
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
+    offset: '5%',
   });
 }
 
@@ -262,20 +245,14 @@ function tendencyViz(newsData) {
   //console.log(data);
 
   // Set all the parameters of our chart area
-<<<<<<< HEAD
-  const margin = { top: 50, right: 50, bottom: 50, left: 175 };
-  const width = 1000 - margin.left - margin.right;
+  const margin = { top: 50, right: 50, bottom: 50, left: 270 };
+  const width = 1230 - margin.left - margin.right;
   const height = 550 - margin.top - margin.bottom;
-=======
-  const margin = { top: 45, right: 50, bottom: 30, left: 210 };
-  const width = 950 - margin.left - margin.right;
-  const height = 470 - margin.top - margin.bottom;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 
   // Create the svg and the group thar is going to
   // hold our data
   const svg = d3
-    .select('#tendency-viz')
+    .select('#tendency_viz')
     .append('svg')
     .attr('width', width + margin.right + margin.left)
     .attr('height', height + margin.top + margin.bottom)
@@ -338,7 +315,7 @@ function tendencyViz(newsData) {
     .range(['#5cdacc', '#ff1d34', '#ffc750', '#ff8c50']);
 
   const waypoint = new Waypoint({
-    element: $('#tendency-month'),
+    element: $('#tendency_month'),
     handler: function(direction) {
       this.destroy();
       // Iterate over every element of our data (except month)
@@ -385,11 +362,7 @@ function tendencyViz(newsData) {
             radius: 3,
           },
           x: 5,
-<<<<<<< HEAD
           y: 140,
-=======
-          y: 119,
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
           dy: -30,
           dx: 50,
         },
@@ -402,47 +375,11 @@ function tendencyViz(newsData) {
           subject: {
             radius: 3,
           },
-<<<<<<< HEAD
-          x: 530,
+          x: 630,
           y: 30,
           dy: -20,
           dx: -20,
         },
-=======
-          x: 480,
-          y: 26,
-          dy: -20,
-          dx: -20,
-        },
-        {
-          type: d3.annotationCalloutCircle,
-          note: {
-            title: '"El Chapo Guzmán" gets extradited to the U.S.',
-            wrap: 210,
-          },
-          subject: {
-            radius: 3,
-          },
-          x: 685,
-          y: 232,
-          dy: 60,
-          dx: -3,
-        },
-        {
-          type: d3.annotationCalloutCircle,
-          note: {
-            title: 'The Election reaches its conclusion',
-            wrap: 150,
-          },
-          subject: {
-            radius: 3,
-          },
-          x: 628,
-          y: 95,
-          dy: 50,
-          dx: -50,
-        },
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
       ].map(function(d) {
         d.color = '#02111b';
         return d;
@@ -460,29 +397,17 @@ function tendencyViz(newsData) {
       d3.selectAll('.annotation-group')
         .attr('opacity', 0)
         .transition()
-<<<<<<< HEAD
         .duration(6450)
         .ease(d3.easeExpIn)
         .attr('opacity', 1);
     },
-    offset: '30%',
-=======
-        .duration(7850)
-        .ease(d3.easeExpIn)
-        .attr('opacity', 1);
-    },
-    offset: '16%',
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
+    offset: '12%',
   });
 
   svg
     .append('g')
     .attr('class', 'legendOrdinal')
-<<<<<<< HEAD
     .attr('transform', 'translate(' + (width - 60) + ',' + '1)');
-=======
-    .attr('transform', 'translate(' + (width - 60) + ',' + '0.1)');
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 
   legendOrdinal = d3
     .legendColor()
@@ -493,25 +418,53 @@ function tendencyViz(newsData) {
         .type(d3.symbolTriangle)
         .size(35)()
     )
-<<<<<<< HEAD
     .shapePadding(10)
-=======
-    .shapePadding(5)
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
     .scale(color);
 
   svg.select('.legendOrdinal').call(legendOrdinal);
 }
 
-<<<<<<< HEAD
-=======
-$('#month-info').css('opacity', 0);
+function headlines(newsData) {
+  // const headlines = newsData.map(article => article.header);
 
-const waypoint = new Waypoint({
-  element: $('#month-info'),
-  handler: function(direction) {
-    $('#month-info').addClass('fadeInRight');
-  },
-  offset: '15%',
-});
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
+  // console.log(headlines);
+
+  const example = [
+    'Trump Can Actually Create Jobs And Security For Americans With China And Mexico’s Help',
+    'The Enemy Within: Bribes Bore a Hole in the U.S. Border',
+    'Walmart to Invest $1.3 Billion in Mexico',
+    'NAFTA Is Here To Stay, Even Under Trump',
+    'Sinaloa cartel lieutenant arrested in Nebraska during a traffic stop',
+    'Small Businesses Lament There Are Too Few Mexicans in U.S., Not Too Many',
+    'Mexico Grapples With a Rise in Killings',
+    '"El Chapo" money launderer gets 8 years in prison',
+    'Tunnels, Drones, Jet Skis, and Planes: How the Cartels Beat a Border Wall',
+    'Illegal Entry By Mexicans Fell 82% In Past 10 Years',
+    'Peña Nieto was meek with Trump. Latino voters in the U.S. won’t be.',
+  ];
+
+  textSequence(0);
+  function textSequence(i) {
+    if (example.length > i) {
+      setTimeout(function() {
+        document.getElementById('sequence').innerHTML = example[i];
+        textSequence(++i);
+      }, 7000); // 1 second (in milliseconds)
+    } else if (example.length == i) {
+      // Loop
+      textSequence(0);
+    }
+  }
+
+  // const icecreamColors = [
+  //   {
+  //     chocolate: 'brown',
+  //   },
+
+  //   {
+  //     chocolate: 'yes',
+  //   },
+  // ];
+
+  // const news = icecreamColors.map(user => user.chocolate);
+}
