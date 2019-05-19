@@ -9,13 +9,6 @@ body {
   color: #02111b;
   font-family: Open Sans, Helvetica, sans-serif;
   background-color: #fcfcfc;
-<<<<<<< HEAD
-  font-size: 18px;
-}
-
-#title {
-  height: 600px;
-=======
   font-size: 15px;
 }
 
@@ -91,20 +84,15 @@ body {
   margin-top: 32px;
   margin-left: -120px;
   height: 100vh;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 }
 
 .subt {
   margin-top: 60px;
-<<<<<<< HEAD
-  font-size: 22px;
-=======
   font-size: 20px;
 }
 
 .align {
   text-align: justify;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 }
 
 .anchor {
@@ -115,9 +103,6 @@ body {
 
 a:hover {
   text-decoration: none;
-<<<<<<< HEAD
-  color: #02111b;
-=======
   background-color: #02111b;
   color: #fcfcfc;
 }
@@ -180,23 +165,16 @@ a:hover {
 
 .last-modal {
   margin-bottom: 100px;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 }
 
 #data-intro {
   margin-bottom: 150px;
 }
 
-<<<<<<< HEAD
-#example-title {
-  font-family: 'IBM Plex Mono', monospace;
-  margin-bottom: 50px;
-=======
 .example-title {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
   margin-bottom: 40px;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 }
 
 .positive {
@@ -220,22 +198,10 @@ a:hover {
 }
 
 .btn {
-<<<<<<< HEAD
-  background-color: #bfc0c1;
-  color: #02111b;
-  margin-top: 35px;
-  margin-bottom: 35px;
-}
-
-.btn-primary:hover {
-  background-color: #02111b;
-  color: #fcfcfc;
-=======
   background-color: #02111b;
   color: #fcfcfc;
   margin-top: 35px;
   margin-bottom: 35px;
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 }
 
 .modal-body {
@@ -243,101 +209,9 @@ a:hover {
   text-align: left;
 }
 
-<<<<<<< HEAD
-.tendency-bar {
-  margin-top: 70px;
-}
-/*
-#outlets-viz {
-  width: 2000px;
-} */
-
-/* p {
-  line-height: 1.6;
-} */
-
-/* img {
-  max-height: 100%;
-} */
-/*
-a {
-  color: #fcfcfc;
-  padding: 3px;
-  background-color: #02111b;
-  text-decoration: none;
-} */
-
-/* h1,
-h2 {
-  font-size: 80px;
-  font-weight: 100;
-  margin: 0;
-} */
-
-/* h3 {
-  font-size: 40px;
-  margin: 0;
-  font-weight: 100;
-  margin-bottom: 150px;
-  padding-left: 15px;
-} */
-/*
-#title {
-  font-size: 75px;
-} */
-
-/* .narrative {
-  display: grid;
-  max-width: 1500px;
-  margin: 200px auto;
-  grid-gap: 10px 50px;
-  grid-template-columns: 4fr 12fr 4fr;
-} */
-
-/* .narrative > * {
-  grid-column: 2 / -2;
-} */
-
-/* .narrative > figure {
-  margin: 0;
-  grid-column: 1 / -1;
-  margin-top: 60px;
-  margin-bottom: 60px;
-} */
-
-/* figcaption {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-} */
-
-/* .narrative > blockquote {
-  grid-column: 1 / 0;
-  font-size: 30px;
-  text-align: center;
-} */
-
-/* .tip {
-  padding: 10px;
-  grid-row: span 5;
-  align-self: start;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
-} */
-
-/* .tip-left {
-  grid-column: 1 / span 1;
-  border-right: 2px solid #02111b;
-} */
-
-/* .tip-right {
-  grid-column: span 1 / -1;
-  border-left: 2px solid #02111b;
-} */
-=======
 #tendency-intro {
   margin-bottom: 130px;
 }
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
 
 svg {
   background-color: #fcfcfc;
@@ -363,192 +237,6 @@ svg {
   /* padding: 3px; */
 }
 
-<<<<<<< HEAD
-/* #images-space {
-  padding-top: 70px;
-} */
-
-/* .images-figure {
-  display: grid;
-  grid-template-columns: 4fr 4fr 4fr 4fr;
-  justify-items: center;
-} */
-
-/* .small {
-  width: 200px;
-  height: 200px;
-  filter: grayscale(100%);
-} */
-
-/* .tendency-image {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-} */
-
-/* #labels-figure {
-  margin-top: -40px;
-} */
-/*
-.tendency-label {
-  width: 10px;
-  height: 10px;
-  margin-bottom: 60px;
-} */
-
-/* modal for positive image */
-
-/* .large-positive {
-  background-color: #5cdacc;
-} */
-
-/*Caption of Modal Image*/
-/* .caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  font-family: 'IBM Plex Mono', monospace;
-  color: #02111b;
-  padding: 10px 0;
-  height: 150px;
-} */
-
-/* .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.7);
-} */
-
-/* .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  width: 700px;
-  height: 700px;
-  object-fit: contain;
-} */
-
-/*Animation*/
-/* .modal-content,
-.caption {
-  -webkit-animation-name: zoom;
-  animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-}
-@-webkit-keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-/* Close Button*/
-/* .close {
-  position: absolute;
-  top: 64px;
-  right: 175px;
-  color: #fcfcfc;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.close:hover,
-.close:focus {
-  color: #fcfcfc;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-/* .intro {
-  margin-bottom: 95px;
-  text-align: center;
-} */
-
-/* #start-tviz {
-  margin-top: 10px;
-} */
-
-text {
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-/* #tendency_viz {
-  margin-top: -10px;
-} */
-
-g.annotation-note {
-  font-size: 12px;
-}
-
-g.tick {
-  font-size: 12px;
-}
-
-text.label {
-  font-size: 12px;
-}
-
-#month-info {
-  margin-top: -16px;
-  margin-left: -30px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-}
-
-/* #finish-tendency {
-  margin-bottom: 80px;
-} */
-
-/* #headlines {
-  margin-top: 10px;
-  text-align: center;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 26px;
-} */
-
-/* #move {
-  margin: 0;
-  grid-column: 0/2;
-  background-color: #5cdacc;
-} */
-/*
-#small {
-  width: 700px;
-  height: 550px;
-  margin-bottom: 30px;
-} */
-
-/* #theme-viz {
-  margin-top: -105px;
-} */
-
-/* resize images */
-/* #small img {
-  width: 100%;
-  height: auto;
-} */
-=======
 text {
   font-family: 'IBM Plex Mono', monospace;
 }
@@ -674,4 +362,3 @@ hr.styled:before {
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
->>>>>>> 29e2c79bd764142060eabc9e8ea9051c8a4cf6e9
